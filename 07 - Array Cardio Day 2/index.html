@@ -47,6 +47,11 @@
     // Find the comment with this ID
     // delete the comment with the ID of 823423
 
+    let target = comments.findIndex(element => element.id === 823423)
+        console.log(target);
+    delete comments[target];
+    console.log(comments);
+
   </script>
 </body>
 </html>
