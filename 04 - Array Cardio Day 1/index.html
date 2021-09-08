@@ -93,9 +93,27 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    const sortedLastNames = inventors.sort((a, b) => {
+      if (a.last > b.last){
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const reducedData = data.reduce((obj, currentVal) => {
+      if (!obj[currentVal]) {
+        obj[currentVal] = 0;
+      } 
+       obj[currentVal]++;
+      return obj;
+
+    }, {});
+
+    console.log(reducedData);
 
   </script>
 </body>
